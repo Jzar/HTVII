@@ -1,3 +1,4 @@
+from sentiment import sent
 def extract(file):
 	f = open(file,'r')
 	tupleArray = []
@@ -9,6 +10,9 @@ def extract(file):
 		tuple = [zero,one]
 		tupleArray.append(tuple)
 	return tupleArray
-d = extract('test3.csv')
+d = extract('twitterData.txt')
+f = open( "processedTweets",'w')
 for i in range(len(d)):
-	print d[i][0],d[i][1],'\n'
+	d[i][0] = d[i][0].split(" ")
+	print (d[i][0][1]) 
+	f.write( str(d[i][0][0])+","+str(d[i][0][1])+","+str(sent(d[i][1]))+"\n")
