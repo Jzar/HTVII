@@ -43,13 +43,14 @@ class App extends Component {
         Your ultimate Ethereum Predictor!
         </h3>
         <p>
-        This is our estimated Ethereum price
+        This is our estimated current Ethereum price
         <TextFileReader txt={myTxt}/>
         </p>
         <p>
-        Here is a graph showing data:
+        Here is a graph showing our prediction model vs the
+        historical data on Ethereum price
         <br></br>
-        <img src={require('./data/graph.png')} />
+        <img src={require('./data/prediction_graph.png')} />
         </p>
 
 
