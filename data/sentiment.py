@@ -1,6 +1,6 @@
 def sent(text):
 
-    import http.client, urllib.request, urllib.parse, urllib.error, base64, json
+    import httplib, urllib, base64, json
 
 
     accessKey = "dc8cd943ae384a4a8f7086791eadd581"
@@ -10,7 +10,7 @@ def sent(text):
     path = '/text/analytics/v2.0/sentiment'
 
     headers = {'Ocp-Apim-Subscription-Key': accessKey}
-    conn = http.client.HTTPSConnection(uri)
+    conn = httplib.HTTPSConnection(uri)
 
     documents = { 'documents': [
     { 'id': '1', 'language': 'en', 'text': text},

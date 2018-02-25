@@ -193,7 +193,6 @@ model2.add(Dense(25, activation='linear'))
 model2.add(Dense(10, activation='linear'))
 model2.add(Dense(5, activation='linear'))
 model2.add(Dense(1, activation='linear'))
-model.add(Activation(a))
 
 
 # In[24]:
@@ -290,6 +289,3 @@ final_df.to_csv('predictions.csv')
 
 
 # In[ ]:
-
-
-

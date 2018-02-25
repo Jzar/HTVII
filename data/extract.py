@@ -1,3 +1,4 @@
+import time
 from sentiment import sent
 def extract(file):
 	f = open(file,'r')
@@ -11,8 +12,8 @@ def extract(file):
 		tupleArray.append(tuple)
 	return tupleArray
 d = extract('twitterData.txt')
-f = open( "processedTweets",'w')
-for i in range(len(d)):
-	d[i][0] = d[i][0].split(" ")
-	print (d[i][0][1]) 
-	f.write( str(d[i][0][0])+","+str(d[i][0][1])+","+str(sent(d[i][1]))+"\n")
+f = open( "processedTweets",'a')
+for j in range(len(d)):
+	d[j][0] = d[j][0].split(" ")
+	time.sleep(0.25) #We are limited in our api calls per seconds
+	f.write( str(d[j][0][0])+","+str(d[j][0][1])+","+str(sent(d[j][1]))+"\n")
