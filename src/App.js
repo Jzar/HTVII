@@ -43,7 +43,7 @@ class App extends Component {
         Your ultimate Ethereum Predictor!
         </h3>
         <p>
-        This is our estimated current Ethereum price
+        This is our estimated current Ethereum price in BTC
         <TextFileReader txt={myTxt}/>
         </p>
         <p>
