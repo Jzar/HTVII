@@ -3,6 +3,7 @@ import './App.css';
 import TextFileReader from './File.js'
 import axios from 'axios'
 
+
 class App extends Component {
 
   constructor(props) {
@@ -28,9 +29,11 @@ class App extends Component {
     .then(response => console.log(response))
     }
 
+
+
   render() {
-    var myTxt = require("./data/predictions.csv");
-    //myTxt =
+    var myTxt = require("./data/number.csv");
+
     return (
       <div className="App">
         <header className="App-header">
@@ -41,10 +44,15 @@ class App extends Component {
         </h3>
         <p>
         This is our estimated Ethereum price
-        //<TextFileReader txt={myTxt}/>
+        <TextFileReader txt={myTxt}/>
+        </p>
+        <p>
+        Here is a graph showing data:
+        <br></br>
+        <img src={require('./data/graph.png')} />
         </p>
 
-      // <h2>Value = {this.state.value} </h2>
+
       </div>
     );
   }
